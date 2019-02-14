@@ -43,6 +43,46 @@ html {
     box-sizing: inherit;
   }
 
+  /* Body background color */
+
+  body {
+      background: #1E2326;
+  }
+
+  /* nav */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+}
+
+  #nav-logo {
+    fill: #fff;
+    width: 4rem;
+}
+
+#nav-icon {
+    width: 1.75rem;
+}
+
+.stroke-heavy .st0, .stroke-light .st1 {
+    fill:none;
+    stroke:#fff;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+}
+
+.stroke-heavy .st0 {
+    stroke-width: 1.25px;
+}
+
+.stroke-light .st1 {
+    stroke-width: 1px;
+}
+
 /* Typography */
 h1 {
     font-family: sans-serif;
