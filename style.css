@@ -43,6 +43,18 @@ html {
     box-sizing: inherit;
   }
 
+  /* import fonts */
+
+  @font-face {
+    font-family: FontName;
+    /* src: url('path/filename.eot'); */
+    src: 
+      /* url('path/filename.eot?#iefix') format('embedded-opentype'),
+      url('path/filename.woff2') format('woff2'), 
+      url('path/filename.woff') format('woff'), */
+      url('path/filename.ttf') format('truetype');
+  }
+
   /* Body background color */
 
   body {
