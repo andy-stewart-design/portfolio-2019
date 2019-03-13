@@ -58,25 +58,63 @@ html {
          url('../../fonts/work-sans-v4-latin-300.svg#WorkSans') format('svg'); /* Legacy iOS */
   }  
 
-  /* padding */
+   /* flex grid */
 
-  .margin {
-    margin:  1rem 2vw;
-  }
-  
-  .padding {
-    padding:  1rem 2vw;
-  }
+   .flex-row {
+       display: flex;
+       flex-flow: row wrap;
+       max-width: 1200px;
+       margin: auto;
+       margin-bottom: 4em;
+   }
 
-  .padding-right-small {
-      padding-right: 5vw;
-  }
+   [class*="col-"] {
+       margin-left: 4%;
+       flex: 0 0 92%;
+   }
+   
+   .col-2 {
+       flex: 0 0 92%;
+   }
 
-   /* column width */
+   .spacer {
+       width: 100%;
+       height: 16em;
+   }
 
-  .width-half {
-      width: 50%;
-  }
+   @media only screen and (min-width: 560px) {
+        .col-1-4,
+        .col-2 {
+            flex: 0 0 44%; 
+        }
+
+        .col-2,
+        .col-4,
+        .col-2-4 {
+            flex: 0 0 92%;
+        }
+   }
+
+   
+   @media only screen and (min-width: 960px) {
+        .col-1-2,
+        .col-1-4 {
+            flex: 0 0 20%;
+        }
+        .col-2,
+        .col-2-4 {
+            flex: 0 0 44%;
+        }
+        .col-3 {
+            flex: 0 0 68%;
+        }
+        .col-4 {
+            flex: 0 0 92%;
+        }
+        .spacer {
+            height: 24em;
+        }
+}
 
   /* Body background color */
 
@@ -95,8 +133,8 @@ nav {
     top: 0;
     left: 0;
     width: 96vw;
-    border-bottom: 1px solid #fff;
     padding: 1em 0;
+    margin:  1em 2vw;
 }
 
 #nav-logo {
@@ -105,7 +143,7 @@ nav {
 }
 
 #nav-icon {
-    width: 4.5em;
+    width: 3.5em;
 }
 
 .stroke-heavy .st1, .stroke-light .st0 {
@@ -123,16 +161,39 @@ nav {
     stroke-width: 1.25px;
 }
 
+@media only screen and (min-width: 560px) {
+    #nav-icon {
+        width: 4.5em;
+    }
+}
+
 /* Typography */
 h1 {
     color: #fff;
-    font-size: 4em;
+    font-size: 2em;
     line-height: 1;
 }
 
 p {
     color: #fff;
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 1.5;
-    margin-top: 1.95em;
+    margin-top: .75em;
+}
+
+@media only screen and (min-width: 560px) {
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    p {
+        font-size: 1.25em;
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    p {
+        margin-top: .5em;
+    }
 }
